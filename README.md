@@ -1,5 +1,7 @@
 # Weather-App
 An app that lets you see the weather conditions in areas according to zip code
+
+#Django Setup
 Create a django project: django-admin startproject <projectname>
 
 start the django server: python manage.py runserver
@@ -12,7 +14,7 @@ create an app: python manage.py startapp <appname>
 
 
 
-#######Git Version Control #########
+#Git Version Control 
 
 Initialise a git repository in your project
 
