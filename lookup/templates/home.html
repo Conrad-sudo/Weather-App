@@ -7,16 +7,32 @@
 {% block content %}
 
 
-<h1> Hello World !!</h1>
+
+
 <br/>
 
+{% if api %}
+
+  {% if api == "Error..."  %}
+
+    <p>An error occurred. Please try again in a while...</p>
+
+  {%else%}
+        <div class="jumbotron {{colour_category}} ">
+
+          <h1 class="display-4">Air Quality: {{ api.0.AQI }}</h1>
+          <h4 class="display-5">Area: {{ api.0.ReportingArea  }}</h4>
+          <h4 class="display-5"> Status: {{ api.0.Category.Name }}</h4>
+
+            <hr/>
+            <p>{{description}}</p>
+
+        </div>
 
 
- Area : {{ api.0.ReportingArea  }}<br/>
- Air Quality: {{ api.0.AQI }}<br/>
- Category:{{ api.0.Category.Name }}<br/>
+  {% endif %}
 
-
+{% endif %}
 
 
 {% endblock %}
